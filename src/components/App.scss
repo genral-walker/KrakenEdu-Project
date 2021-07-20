@@ -81,9 +81,44 @@ none	Same as 0 0 auto.
   height: 100vh;
 }
 
+
+
 .right {
   flex: 1;
   height: 100vh;
   margin-left: 2.5rem;
-  background: greenyellow;
+}
+
+.nav {
+  padding: 1rem;
+  background: $color-primary-dark;
+  @include flex-between;
+  border-radius: 8px;
+  * {
+    color: $color-bg;
+  }
+
+  span, select {
+    font-size: 1.1rem;
+  }
+
+  /*
+  font-size: 1.6rem;
+    font-weight: 600;
+  */ 
+  h2 {
+   flex: 0 0 20%;
+   margin-left: 2rem;
+   font-weight: 600;
+  }
+
+  svg {
+    fill: $color-white;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  span {
+    color: $color-text;
+  }
 }

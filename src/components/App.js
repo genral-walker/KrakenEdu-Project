@@ -3,7 +3,7 @@ import React from 'react';
 import './App.scss';
 import Box from './Box/Box';
 import Btn from './Btn/Btn';
-
+import { ReactComponent as Idea } from '../assets/svgs/idea.svg';
 
 const App = () => {
 
@@ -29,7 +29,7 @@ const App = () => {
 
 
         <Box type='roadmap'>
-        
+
           <div>
             <h2>Roadmap</h2>
             <a href='#'>View</a>
@@ -57,9 +57,19 @@ const App = () => {
       </div>
 
 
-
       <div className='right'>
+        <nav className='nav'>
+          <Idea />
+          <h2>6 Suggestions</h2>
 
+          <span>Sort by:</span>
+          <select>
+            <option selected>Most Upvotes</option>
+            <option>Least Upvotes</option>
+          </select>
+
+          <Btn type='nav'>+ Add Feedback</Btn>
+        </nav>
       </div>
 
     </div>

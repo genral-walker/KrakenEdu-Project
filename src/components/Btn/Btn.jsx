@@ -8,8 +8,8 @@ const Btn = ({ children, type }) => {
 
     const checkBtnType = type => {
         switch (type) {
-            case 'head':
-                return `${styles.btn} ${styles.btnHead}`
+            case 'nav':
+                return `${styles.btn} ${styles.btnNav}`
 
             default:
                 return `${styles.btn}`
