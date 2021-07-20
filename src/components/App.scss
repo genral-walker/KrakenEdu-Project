@@ -1,0 +1,89 @@
+@import "../assets/scss/main.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  color: $color-text;
+}
+/* ::selection {
+   background:rgba(252, 229, 55, 0.72);
+ } */
+
+html {
+  ///// MIN WIDTH RULES GOES IN ASCENDING ORDER //////
+  @include responsive(1600px) {
+    font-size: 93.75%;
+  }
+  @include responsive(1800px) {
+    font-size: 100%;
+  }
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  box-sizing: border-box;
+  background: $color-bg;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+li {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+textarea {
+  cursor: text;
+}
+
+
+
+
+
+// APP
+
+.app {
+  @include flex-between;
+  padding: 5.5rem 13rem 4rem 10rem;
+}
+
+/*
+Same as 1 1 auto.
+initial	Same as 0 1 auto. Read about initial
+none	Same as 0 0 auto.
+*/
+
+.left {
+  flex: 0 0 21%;
+  height: 100vh;
+}
+
+.right {
+  flex: 1;
+  height: 100vh;
+  margin-left: 2.5rem;
+  background: greenyellow;
+}
