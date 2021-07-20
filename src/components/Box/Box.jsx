@@ -1,9 +1,10 @@
 
 import React from 'react';
+import Btn from '../Btn/Btn';
 import styles from './Box.module.scss';
 
 
-const Box = ({ children, type }) => {
+const Box = ({ children, type, votes, topic, details, count, btnName }) => {
 
     const classesToReturn = type => {
         switch (type) {
@@ -16,12 +17,37 @@ const Box = ({ children, type }) => {
             case 'roadmap':
                 return `${styles.box} ${styles.roadmap}`
 
+            case 'main':
+                return `${styles.box} ${styles.main}`
+
             default:
                 return `${styles.box}`
         }
     };
 
-    return <div className={classesToReturn(type)}> {children}</div>
+
+    if (type !== 'main') {
+        return <div className={classesToReturn(type)}>{children}</div>
+    } else {
+        return (
+            <div className={classesToReturn(type)}>
+                <div>
+                    <span>^</span>
+                    <span>{votes}</span>
+                </div>
+
+                <div>
+                    <h2>{topic}</h2>
+                    <p>{details}</p>
+                    <Btn type='overview'>{btnName}</Btn>
+                </div>
+
+                <span></span>
+                <h2>{count}</h2>
+            </div>
+        )
+    }
+
 
 };
 

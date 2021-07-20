@@ -29,6 +29,7 @@ body {
   font-family: "Jost", sans-serif;
   box-sizing: border-box;
   background: $color-bg;
+  overflow: hidden;
 }
 
 a {
@@ -64,7 +65,7 @@ textarea {
 
 // APP
 .app {
-  padding: 5.5rem 13rem 4rem 10rem;
+  padding: 5rem 13rem 0 10rem;
   display: grid;
   grid-template-columns: 21% 1fr;
   grid-template-rows: 5rem auto;
@@ -117,7 +118,8 @@ textarea {
 .main {
   grid-column: 2/ -1;
   grid-row: 2 / -1;
-  border: 1px solid red;
-  overflow: hidden;
+  padding-bottom: 4rem;
+  height: 80vh;
+  overflow-y: scroll;
 }
 
