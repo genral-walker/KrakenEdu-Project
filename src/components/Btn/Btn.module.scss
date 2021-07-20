@@ -22,6 +22,18 @@
   border-radius: 6px;
   margin-left: auto;
   transition: .5s;
+  @include responsive(500px) {
+    font-size: .9rem;
+   }
+   @include responsive(400px) {
+    font-size: .84rem;
+   }
+   @include responsive(330px) {
+    padding: 0.8rem 1rem;
+   }
+   @include responsive(320px) {
+    padding: 0.8rem;
+   }
 
   &:active {
       transform: translateY(3px) scale(.99);
