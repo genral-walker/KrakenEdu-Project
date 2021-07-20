@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   box-sizing: border-box;
   background: $color-bg;
 }
@@ -62,54 +62,36 @@ textarea {
 
 
 
-
 // APP
-
 .app {
-  @include flex-between;
   padding: 5.5rem 13rem 4rem 10rem;
+  display: grid;
+  grid-template-columns: 21% 1fr;
+  grid-template-rows: 5rem auto;
+  gap: 2.5rem;
 }
 
-/*
-Same as 1 1 auto.
-initial	Same as 0 1 auto. Read about initial
-none	Same as 0 0 auto.
-*/
-
-.left {
-  flex: 0 0 21%;
-  height: 100vh;
-}
-
-
-
-.right {
-  flex: 1;
-  height: 100vh;
-  margin-left: 2.5rem;
-}
 
 .nav {
-  padding: 1rem;
+  grid-column: 2/ -1;
+  grid-row: 1 / 2;
   background: $color-primary-dark;
   @include flex-between;
+  padding: 0 1rem;
   border-radius: 8px;
   * {
     color: $color-bg;
   }
 
-  span, select {
+  span,
+  select {
     font-size: 1.1rem;
   }
 
-  /*
-  font-size: 1.6rem;
-    font-weight: 600;
-  */ 
   h2 {
-   flex: 0 0 20%;
-   margin-left: 2rem;
-   font-weight: 600;
+    flex: 0 0 20%;
+    margin-left: 2rem;
+    font-weight: 600;
   }
 
   svg {
@@ -122,3 +104,20 @@ none	Same as 0 0 auto.
     color: $color-text;
   }
 }
+
+
+
+.aside {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
+
+
+.main {
+  grid-column: 2/ -1;
+  grid-row: 2 / -1;
+  border: 1px solid red;
+  overflow: hidden;
+}
+

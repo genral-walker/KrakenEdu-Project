@@ -10,7 +10,21 @@ const App = () => {
   return (
     <div className='app'>
 
-      <div className='left'>
+      <nav className='nav'>
+        <Idea />
+        <h2>6 Suggestions</h2>
+
+        <span>Sort by:</span>
+        <select>
+          <option selected>Most Upvotes</option>
+          <option>Least Upvotes</option>
+        </select>
+
+        <Btn type='nav'>+ Add Feedback</Btn>
+      </nav>
+
+
+      <div className='aside'>
 
         <Box type='inverse'>
           <h1>Frontend Mentor</h1>
@@ -57,19 +71,11 @@ const App = () => {
       </div>
 
 
-      <div className='right'>
-        <nav className='nav'>
-          <Idea />
-          <h2>6 Suggestions</h2>
+      <div className='main'>
 
-          <span>Sort by:</span>
-          <select>
-            <option selected>Most Upvotes</option>
-            <option>Least Upvotes</option>
-          </select>
-
-          <Btn type='nav'>+ Add Feedback</Btn>
-        </nav>
+        <Box>
+        
+        </Box>
       </div>
 
     </div>
